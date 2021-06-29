@@ -7,7 +7,7 @@ public class BeverageMakerThread implements Runnable {
     private Bevarage bevarage;
     private IInventoryManagementSvc inventoryManagementSvc;
 
-    BeverageMakerThread(Bevarage bevarage, IInventoryManagementSvc inventoryManagementSvc) {
+    public BeverageMakerThread(Bevarage bevarage, IInventoryManagementSvc inventoryManagementSvc) {
         this.bevarage = bevarage;
         this.inventoryManagementSvc =  inventoryManagementSvc;
     }

@@ -1,10 +1,11 @@
-package com.assignment.dunzo.machine.util;
+package com.assignment.dunzo.machine.controller;
 
 import com.assignment.dunzo.machine.entities.Bevarage;
 import com.assignment.dunzo.machine.entities.CoffeeMachineInput;
 import com.assignment.dunzo.machine.exception.CoffeeMachineException;
 import com.assignment.dunzo.machine.service.IInventoryManagementSvc;
 import com.assignment.dunzo.machine.service.InventoryManagementSvc;
+import com.assignment.dunzo.machine.util.BeverageMakerThread;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.util.HashMap;
@@ -54,6 +55,7 @@ public class CoffeeMachineExecutor {
 
     public void stop() {
         executor.shutdown();
+        inventoryManagementSvc.setInventory(new HashMap<>());
     }
 
     /*
